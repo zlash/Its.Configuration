@@ -65,6 +65,8 @@ namespace Its.Configuration
         {
             if (name == null)
                 throw new ArgumentNullException("name");
+              
+            if( Type.GetType( "Mono.Runtime" ) != null ) return null;
 
             string finalName = name;
             AssemblyInfo aInfo = new AssemblyInfo();
